@@ -1,0 +1,59 @@
+{
+  "name": "educational-mobile-quiz-game-for-students",
+  "version": "0.1.0",
+  "description": "A native application built with NativeScript-Vue-Typescript",
+  "author": "Karl Anthony B. Baluyot <sovietkamarov@gmail.com>",
+  "license": "MIT",
+  "nativescript": {
+    "id": "com.xtalintegrated.karl",
+    "tns-ios": {
+      "version": "5.0.0"
+    },
+    "tns-android": {
+      "version": "5.2.1"
+    }
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "file-system": "^2.2.2",
+    "lodash": "^4.17.11",
+    "nativescript-couchbase-plugin": "^0.9.1",
+    "nativescript-localstorage": "^2.0.0",
+    "nativescript-pdf-view": "^2.0.1",
+    "nativescript-theme-core": "^1.0.4",
+    "nativescript-toast": "^2.0.0",
+    "nativescript-vue": "^2.2.0",
+    "tns-core-modules": "^5.2.2",
+    "tslib": "^1.9.3",
+    "vue-property-decorator": "^7.3.0",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.14.4",
+    "babel-loader": "^7.1.1",
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "lazy": "1.0.11",
+    "mini-css-extract-plugin": "^0.4.5",
+    "nativescript-dev-webpack": "^0.18.5",
+    "nativescript-vue-template-compiler": "^2.2.0",
+    "nativescript-worker-loader": "^0.9.5",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.4000",
+    "uglifyjs-webpack-plugin": "~2.0.1",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
+    "webpack": "^4.29.6",
+    "webpack-bundle-analyzer": "^3.1.0",
+    "webpack-cli": "^3.3.0"
+  }
+}
