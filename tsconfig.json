@@ -7,7 +7,7 @@
       "dom",
       "es2015"
     ],
-    "allowJs": true,
+    "allowJs": false,
     "sourceMap": true,
     "noEmitHelpers": true,
     "importHelpers": true,
