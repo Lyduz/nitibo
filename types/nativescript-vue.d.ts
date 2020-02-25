@@ -1,1 +1,3 @@
-declare var DEBUG_MODE: boolean
+declare module 'nativescript-vue-navigator';
+declare module 'nativescript-vue-devtools';
+
