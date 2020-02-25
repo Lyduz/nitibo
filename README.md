@@ -15,11 +15,6 @@ A modern Javascript frontend framework, strongly believing in single file compon
 
 https://vuejs.org
 
-#### Vue Router
-Default router (made by official maintainers of Vue JS)
-
-https://router.vuejs.org/
-
 #### Vuex
 Default state management framework for Vue (made by official maintainers of Vue JS)
 
