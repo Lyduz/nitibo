@@ -8,7 +8,6 @@ const getters = <GetterTree<typeof state, any>>{
     // getLevelState(state) {               must make use of mapState
     //     return state.levelState
     // }
-
 }
 
 const mutations = <MutationTree<typeof state>>{
