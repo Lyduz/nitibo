@@ -18,7 +18,7 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import { State, namespace } from "vuex-class";
-import Title from "./Selection/Title.vue";
+import Title from "@/components/Selection/Title.vue";
 
 const JSON_HELPER = namespace("json_helper");
 

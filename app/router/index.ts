@@ -1,5 +1,5 @@
-import Home from "../components/Home.vue";
-import Categories from "../components/Categories.vue";
+import Home from "@/views/Home.vue";
+import Categories from "@/views/Categories.vue";
 
 export const routes = {
   '/home': {
