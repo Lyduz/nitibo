@@ -1,46 +1,41 @@
 <template>
   <Page class="page">
     <ActionBar class="action-bar">
-      <Label text="NativeScript"
-        style="font-size: 20%;" />
+      <Label text="Nitibo" style="font-size: 20%;" />
     </ActionBar>
 
-    <StackLayout orientation="vertical"
+    <StackLayout
+      orientation="vertical"
       horizontalAlignment="center"
-      verticalAlignment="center">
-      <Button style="font-size: 25px; width: 80%; background-color: #dcd427;"
-        @tap="onPlay">Click Me :)</Button>
+      verticalAlignment="center"
+    >
+      <Button
+        style="font-size: 25px; width: 80%; background-color: #dcd427;"
+        @tap="onPlay"
+        >Click Me :)</Button
+      >
     </StackLayout>
-
   </Page>
 </template>
 
 <script lang="ts">
-  import { Vue, Component } from 'vue-property-decorator'
-  import { mapActions } from 'vuex'
+import { Vue, Component } from "vue-property-decorator";
+import { Action, namespace } from "vuex-class";
 
-  @Component({
-    methods: {
-      ...mapActions('json_helper', [
-        'setLoggedUsername'
-      ])
-    }
-  })
-  export default class Home extends Vue {
+const JSON_HELPER = namespace("json_helper");
 
-    //---> METHODS
-    onPlay(event) {
+@Component
+export default class Home extends Vue {
+  @JSON_HELPER.Action("setLoggedUsername") actionSetLoggedUsername?: any;
 
-      //store in state
-      this.setLoggedUsername("I am Karl Anthony Baluyot")
-      console.log('HOME', 'I GOT HERE')
+  onPlay(event: any): void {
+    //store in state
+    this.actionSetLoggedUsername("I am Karl Anthony Baluyot");
 
-      //navigate to categories
-      this.$router.push({
-        path: '/categories'
-      })
-
-    }
-
+    // @ts-ignore
+    this.$navigator.navigate('/categories')
+    
+    console.log("HOME", "I GOT HERE");
   }
+}
 </script>
