@@ -10,7 +10,7 @@ const store = new Vuex.Store({
   modules: {
     json_helper
   },
-  strict: DEBUG_MODE,
+  strict: true,
 });
 
 Vue.prototype.$store = store;
