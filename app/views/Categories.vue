@@ -4,7 +4,7 @@
       <NavigationButton
         text="Go Back"
         android.systemIcon="ic_menu_back"
-        @tap="$router.push('/home')"
+        @tap="$navigator.navigate('/home')"
       />
       <Label text="NativeScript" style="font-size: 20%;" />
     </ActionBar>
