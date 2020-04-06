@@ -1,17 +1,16 @@
 import Home from "@/views/Home.vue";
-import Categories from "@/views/Categories.vue";
+import { socialRoutes } from "./social";
+import { chartRoutes } from "./chart";
 
-export const routes = {
-  '/home': {
-    component: Home,
-    meta: {
-      title: "Home"
+const baseRoutes = {
+    '/home': {
+      component: Home,
+      meta: {
+        title: "Home"
+      }
     }
-  },
-  '/categories': {
-    component: Categories,
-    meta: {
-      title: "Categories"
-    }
-  },
-}
+};
+
+const allRountes = Object.assign(baseRoutes, socialRoutes, chartRoutes);
+
+export const routes = allRountes;

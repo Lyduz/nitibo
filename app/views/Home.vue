@@ -1,7 +1,7 @@
 <template>
-  <Page class="page">
-    <ActionBar class="action-bar">
-      <Label text="Nitibo" style="font-size: 20%;" />
+  <Page>
+    <ActionBar>
+      <Label text="Lyduz" class="title" />
     </ActionBar>
 
     <StackLayout
@@ -9,11 +9,8 @@
       horizontalAlignment="center"
       verticalAlignment="center"
     >
-      <Button
-        style="font-size: 25px; width: 80%; background-color: #dcd427;"
-        @tap="onPlay"
-        >Click Me :)</Button
-      >
+      <Button class="button" @tap="goTo('social')">Social Page</Button>
+      <Button class="button" @tap="goTo('chart')">Chart Page</Button>
     </StackLayout>
   </Page>
 </template>
@@ -28,14 +25,27 @@ const JSON_HELPER = namespace("json_helper");
 export default class Home extends Vue {
   @JSON_HELPER.Action("setLoggedUsername") actionSetLoggedUsername?: any;
 
-  onPlay(event: any): void {
+  goTo(route: string): void {
     //store in state
     this.actionSetLoggedUsername("I am Karl Anthony Baluyot");
-
     // @ts-ignore
-    this.$navigator.navigate('/categories')
-    
-    console.log("HOME", "I GOT HERE");
+    this.$navigator.navigate(`/${route}`)
   }
 }
 </script>
+
+<style scoped>
+ActionBar {
+  background-color: #03DAC5;
+  color: #000000;
+}
+.title{
+  font-size: 20%;
+}
+.button{
+    font-size: 25px; 
+    width: 80%; 
+    background-color: #03DAC5;
+    color: #000
+}
+</style>
