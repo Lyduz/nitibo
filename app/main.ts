@@ -2,7 +2,7 @@ import Vue from 'nativescript-vue'
 import VueDevtools from 'nativescript-vue-devtools'
 import Navigator from 'nativescript-vue-navigator'
 
-import { routes } from './router'
+import routes from './router'
 import store from './store'
 
 import App from './App.vue'

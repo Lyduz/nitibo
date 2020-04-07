@@ -1,16 +1,7 @@
-import { Home } from '@/modules'
-import { socialRoutes } from '@/modules/social/router'
-import { chartRoutes } from '@/modules/chart/router'
+import { homeRoutes } from '@/modules/home/routes'
+import { socialRoutes } from '@/modules/social/routes'
+import { chartRoutes } from '@/modules/chart/routes'
 
-const baseRoutes = {
-  '/home': {
-    component: Home,
-    meta: {
-      title: 'Home',
-    },
-  },
-}
+const routes = Object.assign(homeRoutes, socialRoutes, chartRoutes)
 
-const allRountes = Object.assign(baseRoutes, socialRoutes, chartRoutes)
-
-export const routes = allRountes
+export default routes
