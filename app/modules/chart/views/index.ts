@@ -1,5 +1,3 @@
-import Chart from "./chart.vue";
+import Chart from './chart.vue'
 
-export {
-    Chart
-}
+export { Chart }

@@ -1,10 +1,10 @@
-import { Social } from "@/modules/social/views";
+import { Social } from '@/modules/social/views'
 
 export const socialRoutes: any = {
-  "/social": {
+  '/social': {
     component: Social,
     meta: {
-      title: "social",
+      title: 'social',
     },
   },
-};
+}

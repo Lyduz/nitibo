@@ -1,10 +1,10 @@
-import { Chart } from "@/modules/chart/views";
+import { Chart } from '@/modules/chart/views'
 
 export const chartRoutes: any = {
-  "/chart": {
+  '/chart': {
     component: Chart,
     meta: {
-      title: "chart",
+      title: 'chart',
     },
   },
-};
+}
