@@ -1,9 +1,9 @@
 import Vue from 'nativescript-vue';
 import Vuex from 'vuex';
 
-import auth from './modules/auth';
-import chart from './modules/chart';
-import social from './modules/social';
+import auth from '@/modules/auth';
+import chart from '@/modules/chart/store';
+import social from '@/modules/social/store';
 
 Vue.use(Vuex);
 

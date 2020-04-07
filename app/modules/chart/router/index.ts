@@ -1,4 +1,4 @@
-import { Chart } from "@/views/chart";
+import { Chart } from "@/modules/chart/views";
 
 export const chartRoutes: any = {
   "/chart": {

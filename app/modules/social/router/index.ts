@@ -1,4 +1,4 @@
-import { Social } from "@/views/social";
+import { Social } from "@/modules/social/views";
 
 export const socialRoutes: any = {
   "/social": {

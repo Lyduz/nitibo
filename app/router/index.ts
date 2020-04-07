@@ -1,6 +1,6 @@
-import { Home } from "@/views";
-import { socialRoutes } from "./social.routes";
-import { chartRoutes } from "./chart.routes";
+import { Home } from "@/modules";
+import { socialRoutes } from "@/modules/social/router";
+import { chartRoutes } from "@/modules/chart/router";
 
 const baseRoutes = {
   "/home": {

@@ -6,7 +6,7 @@
         android.systemIcon="ic_menu_back"
         @tap="$navigator.navigate('/home')"
       />
-      <Label :text="title" class="title"/>
+      <Label :text="title" class="title" />
     </ActionBar>
 
     <StackLayout
@@ -14,7 +14,7 @@
       horizontalAlignment="center"
       verticalAlignment="center"
     >
-        <Label :text="title" class="header" /> 
+      <Label :text="title" class="header" />
     </StackLayout>
   </Page>
 </template>
@@ -27,29 +27,26 @@ const STORE_CHART = namespace("chart");
 
 @Component
 export default class Chart extends Vue {
+  @STORE_CHART.Getter("title") storeChart_title?: string;
 
-    @STORE_CHART.Getter('title') storeChart_title?: string;
+  // data
+  title = "Chart Page";
 
-    // data
-    title = "Chart Page";
-
-    mounted(){
-        console.log(`Mounted: ${this.storeChart_title}`)
-    }
-
-
+  mounted() {
+    console.log(`Mounted: ${this.storeChart_title}`);
+  }
 }
 </script>
 
 <style scoped>
 ActionBar {
-  background-color: #03DAC5;
+  background-color: #03dac5;
   color: #000000;
 }
-.title{
+.title {
   font-size: 20%;
 }
-.header{
+.header {
   font-size: 35%;
 }
 </style>
