@@ -1,6 +1,6 @@
 import Home from "@/views/Home.vue";
-import { socialRoutes } from "./social.router";
-import { chartRoutes } from "./chart.router";
+import { socialRoutes } from "./social.routes";
+import { chartRoutes } from "./chart.routes";
 
 const baseRoutes = {
     '/home': {
