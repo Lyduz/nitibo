@@ -1,11 +1,10 @@
-import Social from "@/views/social/Social.vue";
+import { Social } from "@/views/social";
 
-export const socialRoutes:any = {
-    '/social': {
-        component: Social,
-            meta: {
-                title: "social"
-            }
-        }
+export const socialRoutes: any = {
+  "/social": {
+    component: Social,
+    meta: {
+      title: "social",
+    },
+  },
 };
-  

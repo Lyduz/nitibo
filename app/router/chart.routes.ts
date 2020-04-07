@@ -1,11 +1,10 @@
-import Chart from "@/views/chart/Chart.vue";
+import { Chart } from "@/views/chart";
 
-export const chartRoutes:any = {
-    '/chart': {
-        component: Chart,
-            meta: {
-                title: "chart"
-            }
-        }
+export const chartRoutes: any = {
+  "/chart": {
+    component: Chart,
+    meta: {
+      title: "chart",
+    },
+  },
 };
-  
