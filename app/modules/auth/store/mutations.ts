@@ -1,10 +1,8 @@
 import { MutationTree } from 'vuex'
-import state from './state'
+import { State } from './state'
 
-const Mutations: MutationTree<typeof state> = {
-  SET_TITLE(state, data: string) {
-    state.title = data
+export const Mutations: MutationTree<typeof State> = {
+  SET_TITLE(State, data: string) {
+    State.title = data
   },
 }
-
-export default Mutations

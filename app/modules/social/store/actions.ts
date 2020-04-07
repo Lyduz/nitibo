@@ -1,10 +1,8 @@
 import { ActionTree } from 'vuex'
-import state from './state'
+import { State } from './state'
 
-const Actions: ActionTree<typeof state, any> = {
+export const Actions: ActionTree<typeof State, any> = {
   setTitle(context, payload: string) {
     context.commit('SET_TITLE', payload)
   },
 }
-
-export default Actions

@@ -2,8 +2,6 @@ interface StateInterface {
   title: string
 }
 
-const State: StateInterface = {
+export const State: StateInterface = {
   title: '',
 }
-
-export default State
