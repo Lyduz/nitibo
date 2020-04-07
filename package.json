@@ -14,12 +14,20 @@
       "version": "6.4.1"
     }
   },
+  "scripts": {
+    "android": "npm run lint-and-fix && tns run android --bundle",
+    "ios": "npm run lint-and-fix && tns run ios --bundle",
+    "lint": "npx eslint --ext=ts app/",
+    "lint-and-fix": "npx eslint --ext=ts --fix app/"
+  },
   "dependencies": {
     "@nativescript/theme": "^2.2.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "file-system": "^2.2.2",
     "lodash": "^4.17.15",
     "nativescript-socketio": "^3.3.1",
@@ -27,6 +35,7 @@
     "nativescript-vue": "^2.4.0",
     "nativescript-vue-devtools": "^1.2.0",
     "nativescript-vue-navigator": "^0.2.0",
+    "prettier": "^2.0.4",
     "tns-core-modules": "~6.4.0",
     "tslib": "^1.11.0",
     "vue-devtools": "^5.1.3",
@@ -36,12 +45,15 @@
   },
   "devDependencies": {
     "@types/node": "^10.17.16",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
     "babel-traverse": "6.26.0",
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
+    "eslint": "^6.8.0",
     "lazy": "1.0.11",
     "mini-css-extract-plugin": "^0.4.5",
     "nativescript-dev-webpack": "~1.5.0",
