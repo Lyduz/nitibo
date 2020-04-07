@@ -1,14 +1,17 @@
 import Vue from 'nativescript-vue';
 import Vuex from 'vuex';
 
-//import vuex modules
-import json_helper from './modules/json_helper'
+import auth from './modules/auth';
+import chart from './modules/chart';
+import social from './modules/social';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   modules: {
-    json_helper
+    auth,
+    social,
+    chart
   },
   strict: true,
 });

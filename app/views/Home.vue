@@ -17,19 +17,29 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-import { Action, namespace } from "vuex-class";
+import { Getter, Action, namespace } from "vuex-class";
 
-const JSON_HELPER = namespace("json_helper");
+const STORE_SOCIAL = namespace("social");
+const STORE_CHART = namespace("chart");
 
 @Component
 export default class Home extends Vue {
-  @JSON_HELPER.Action("setLoggedUsername") actionSetLoggedUsername?: any;
+
+  // getters
+  @STORE_SOCIAL.Getter("title") storeSocial_title?: any;
+  // setters
+  @STORE_SOCIAL.Action("setTitle") storeSocial_setTitle?: any;
+  @STORE_CHART.Action("setTitle") storeChart_setTitle?: any;
 
   goTo(route: string): void {
     //store in state
-    this.actionSetLoggedUsername("I am Karl Anthony Baluyot");
+    this.storeSocial_setTitle("Social Page");
     // @ts-ignore
     this.$navigator.navigate(`/${route}`)
+  }
+
+  mounted(){
+      this.storeChart_setTitle("Chart Page");
   }
 }
 </script>

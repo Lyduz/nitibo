@@ -21,11 +21,23 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import { Getter, namespace } from "vuex-class";
+
+const STORE_CHART = namespace("chart");
 
 @Component
 export default class Chart extends Vue {
+
+    @STORE_CHART.Getter('title') storeChart_title?: string;
+
     // data
     title = "Chart Page";
+
+    mounted(){
+        console.log(`Mounted: ${this.storeChart_title}`)
+    }
+
+
 }
 </script>
 
