@@ -1,6 +1,6 @@
 {
   "name": "nitibo",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "description": "A Nativescript-Vue starter template with Typescript, Vue Router, and Vuex support.",
   "author": "Karl Anthony B. Baluyot <sovietkamarov@gmail.com>",
   "license": "MIT",
