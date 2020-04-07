@@ -1,32 +1,30 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "es5",
-    "module": "es2015",
-    "lib": [
-      "dom",
-      "es2015"
-    ],
-    "allowJs": false,
-    "sourceMap": true,
-    "noEmitHelpers": true,
-    "importHelpers": true,
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
+    "strictPropertyInitialization": false,
+    "jsx": "preserve",
+    "importHelpers": true,
     "moduleResolution": "node",
-    "typeRoots": [
-      "types"
-    ],
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "typeRoots": ["types"],
+    "paths": {
+      "@/*": ["app/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
-    "app",
-    "types"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "app/**/*.vue",
+    "types/**/*.ts",
+    "types/**/*.tsx"
   ],
-  "exclude": [
-    "node_modules",
-    "platforms"
-  ]
+  "exclude": ["node_modules", "platforms"]
 }
