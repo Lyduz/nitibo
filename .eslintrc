@@ -1,18 +1,35 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "prettier/vue",
+    "plugin:vue/base"
   ],
   "rules": {
     "prettier/prettier": "error",
     "semi": 0,
     "space-before-function-paren": ["error", "never"],
+    "no-unused-vars": "off", // disable default
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
     "@typescript-eslint/indent": ["error", 2],
-    "@typescript-eslint/member-delimiter-style": 0
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/ban-ts-ignore": "off"
   }
 }
