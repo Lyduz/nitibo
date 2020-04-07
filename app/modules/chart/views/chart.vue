@@ -20,20 +20,20 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import { Getter, namespace } from "vuex-class";
+import { Vue, Component } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
 
-const STORE_CHART = namespace("chart");
+const STORE_CHART = namespace('chart')
 
 @Component
 export default class Chart extends Vue {
-  @STORE_CHART.Getter("title") storeChart_title?: string;
+  @STORE_CHART.Getter('getTitle') chart_get_title!: string
 
   // data
-  title = "Chart Page";
+  title = 'Chart Page'
 
   mounted() {
-    console.log(`Mounted: ${this.storeChart_title}`);
+    console.log(`Mounted: ${this.chart_get_title}`)
   }
 }
 </script>

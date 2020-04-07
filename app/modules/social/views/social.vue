@@ -6,7 +6,7 @@
         android.systemIcon="ic_menu_back"
         @tap="$navigator.navigate('/home')"
       />
-      <Label :text="storeSocial_title" class="title"/>
+      <Label :text="social_get_title" class="title" />
     </ActionBar>
 
     <StackLayout
@@ -14,36 +14,34 @@
       horizontalAlignment="center"
       verticalAlignment="center"
     >
-        <Label :text="storeSocial_title" class="header" /> 
-        <Label text="generated via store vuex" /> 
+      <Label :text="social_get_title" class="header" />
+      <Label text="generated via store vuex" />
     </StackLayout>
   </Page>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import { Getter, namespace } from "vuex-class";
+import { Vue, Component } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
 
-const STORE_SOCIAL = namespace("social");
+const STORE_SOCIAL = namespace('social')
 
 @Component
 export default class Social extends Vue {
-    
-    // getter
-    @STORE_SOCIAL.Getter('title') storeSocial_title?: string;
-
+  // getter
+  @STORE_SOCIAL.Getter('getTitle') social_get_title!: string
 }
 </script>
 
 <style scoped>
 ActionBar {
-  background-color: #03DAC5;
+  background-color: #03dac5;
   color: #000000;
 }
-.title{
+.title {
   font-size: 20%;
 }
-.header{
+.header {
   font-size: 35%;
 }
 </style>

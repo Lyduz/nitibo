@@ -17,28 +17,36 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import { Getter, Action, namespace } from 'vuex-class'
+import { namespace } from 'vuex-class'
 
 const STORE_SOCIAL = namespace('social')
 const STORE_CHART = namespace('chart')
 
 @Component
 export default class Home extends Vue {
-  // getters
-  @STORE_SOCIAL.Getter('title') storeSocial_title?: any
-  // setters
-  @STORE_SOCIAL.Action('setTitle') storeSocial_setTitle?: any
-  @STORE_CHART.Action('setTitle') storeChart_setTitle?: any
+  // social store
+  @STORE_SOCIAL.State('title') social_title!: string
+  @STORE_SOCIAL.Action('setTitle') social_set_title!: (payload: string) => void
 
+  // chart store
+  @STORE_CHART.Action('setTitle') chart_set_title!: (payload: string) => void
+
+  /**
+   * Navigate to view.
+   *
+   * @param   {string}  route
+   *
+   * @return
+   */
   goTo(route: string): void {
     //store in state
-    this.storeSocial_setTitle('Social Page')
+    this.social_set_title('Social Page')
     // @ts-ignore
     this.$navigator.navigate(`/${route}`)
   }
 
   mounted() {
-    this.storeChart_setTitle('Chart Page')
+    this.chart_set_title('Chart Page')
   }
 }
 </script>
