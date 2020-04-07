@@ -1,6 +1,6 @@
 import { Social } from '@/modules/social/views'
 
-export const socialRoutes: any = {
+export const SocialRoutes: object = {
   '/social': {
     component: Social,
     meta: {

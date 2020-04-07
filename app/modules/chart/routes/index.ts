@@ -1,6 +1,6 @@
 import { Chart } from '@/modules/chart/views'
 
-export const chartRoutes: object = {
+export const ChartRoutes: object = {
   '/chart': {
     component: Chart,
     meta: {

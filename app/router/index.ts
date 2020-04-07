@@ -1,7 +1,7 @@
-import { homeRoutes } from '@/modules/home/routes'
-import { socialRoutes } from '@/modules/social/routes'
-import { chartRoutes } from '@/modules/chart/routes'
+import { HomeRoutes } from '@/modules/home/routes'
+import { SocialRoutes } from '@/modules/social/routes'
+import { ChartRoutes } from '@/modules/chart/routes'
 
-const routes = Object.assign(homeRoutes, socialRoutes, chartRoutes)
+const routes = Object.assign(HomeRoutes, SocialRoutes, ChartRoutes)
 
 export default routes
