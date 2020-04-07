@@ -1,5 +1,6 @@
 import Vue from 'nativescript-vue'
-import VueDevtools from 'nativescript-vue-devtools'
+// FIXME: run vue dev tools and enable
+//import VueDevtools from 'nativescript-vue-devtools'
 import Navigator from 'nativescript-vue-navigator'
 
 import routes from './router'
