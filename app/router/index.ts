@@ -1,17 +1,7 @@
-import Home from "@/views/Home.vue";
-import Categories from "@/views/Categories.vue";
+import { HomeRoutes } from '@/modules/home/routes'
+import { SocialRoutes } from '@/modules/social/routes'
+import { ChartRoutes } from '@/modules/chart/routes'
 
-export const routes = {
-  '/home': {
-    component: Home,
-    meta: {
-      title: "Home"
-    }
-  },
-  '/categories': {
-    component: Categories,
-    meta: {
-      title: "Categories"
-    }
-  },
-}
+const routes = Object.assign(HomeRoutes, SocialRoutes, ChartRoutes)
+
+export default routes
