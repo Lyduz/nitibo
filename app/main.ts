@@ -6,6 +6,9 @@ import Navigator from 'nativescript-vue-navigator'
 import routes from './router'
 import store from './store'
 
+import api from './repository'
+Vue.prototype.$api = api
+
 import App from './App.vue'
 import './styles.scss'
 

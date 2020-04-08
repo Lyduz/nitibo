@@ -42,6 +42,8 @@ export default class Home extends Vue {
     //store in state
     this.social_set_title('Social Page')
     // @ts-ignore
+    this.$api.auth.login({ email:'ralph@arbitrage.ph', password: '123abc' })
+    // @ts-ignore
     this.$navigator.navigate(`/${route}`)
   }
 
