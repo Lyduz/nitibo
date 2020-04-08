@@ -24,7 +24,6 @@ export default {
   },
 
   submit(payload: any): any {
-    console.log('hehe')
     return axios.post(`${this.route}`, payload)
   },
 }
