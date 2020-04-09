@@ -1,7 +1,7 @@
 {
   "name": "nitibo",
   "version": "1.0.0",
-  "description": "A Nativescript-Vue starter template with Typescript, Vue Router, and Vuex support.",
+  "description": "A Nativescript-Vue Class Component Starter Template Using Module-Oriented Structure.",
   "author": "Karl Anthony B. Baluyot <sovietkamarov@gmail.com>",
   "license": "MIT",
   "nativescript": {
