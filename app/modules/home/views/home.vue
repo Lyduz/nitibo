@@ -47,7 +47,7 @@ export default class Home extends Vue {
     this.$navigator.navigate(`/${route}`)
   }
 
-  mounted() {
+  mounted(): void {
     this.chart_set_title('Chart Page')
   }
 }
