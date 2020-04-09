@@ -1,30 +1,74 @@
-import axios from './axios'
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 
-export default {
-  route: '',
+export class API {
+  private api: AxiosInstance
 
-  index(params?: object): object {
-    return axios.get(this.route, { params })
-  },
+  public constructor(config: AxiosRequestConfig) {
+    this.api = axios.create(config)
 
-  show(id: string, params?: object): object {
-    return axios.get(`${this.route}/${id}`, { params })
-  },
+    // this middleware is been called right before the http request is made.
+    this.api.interceptors.request.use((param: AxiosRequestConfig) => ({
+      ...param,
+    }))
 
-  create(payload: object): object {
-    return axios.post(`${this.route}`, payload)
-  },
+    // this middleware is been called right before the response is get it by the method that triggers the request
+    this.api.interceptors.response.use((param: AxiosResponse) => ({
+      ...param,
+    }))
+  }
 
-  update(id: string, payload: object): object {
-    return axios.post(`${this.route}/${id}`, payload)
-  },
+  public getUri(config?: AxiosRequestConfig): string {
+    return this.api.getUri(config)
+  }
 
-  put(id: string, payload: object): object {
-    return axios.put(`${this.route}/${id}`, payload)
-  },
+  public request<T, R = AxiosResponse<T>>(
+    config: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.request(config)
+  }
 
-  submit(payload: object): object {
-    console.log(axios)
-    return axios.post(`${this.route}`, payload)
-  },
+  public get<T, R = AxiosResponse<T>>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.get(url, config)
+  }
+
+  public delete<T, R = AxiosResponse<T>>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.delete(url, config)
+  }
+
+  public head<T, R = AxiosResponse<T>>(
+    url: string,
+    config?: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.head(url, config)
+  }
+
+  public post<T, R = AxiosResponse<T>>(
+    url: string,
+    data?: string,
+    config?: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.post(url, data, config)
+  }
+
+  public put<T, R = AxiosResponse<T>>(
+    url: string,
+    data?: string,
+    config?: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.put(url, data, config)
+  }
+
+  public patch<T, R = AxiosResponse<T>>(
+    url: string,
+    data?: string,
+    config?: AxiosRequestConfig
+  ): Promise<R> {
+    return this.api.patch(url, data, config)
+  }
 }

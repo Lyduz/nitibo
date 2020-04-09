@@ -2,7 +2,6 @@ import Vue from 'nativescript-vue'
 import { VNode } from 'vue/types/umd'
 
 // global dependency
-import api from './repository'
 import routes from './router'
 import store from './store'
 
@@ -15,7 +14,6 @@ import Navigator from 'nativescript-vue-navigator'
 
 // register global components
 Vue.use(Navigator, { routes })
-Vue.prototype.$api = api
 
 if (TNS_ENV !== 'production') {
   //FIXME: resolve VueDevTools issue

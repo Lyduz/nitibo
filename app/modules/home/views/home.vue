@@ -18,6 +18,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
+import { AuthRepository } from '@/modules/auth/repository'
 
 const STORE_SOCIAL = namespace('social')
 const STORE_CHART = namespace('chart')
@@ -42,13 +43,19 @@ export default class Home extends Vue {
     // store in state
     this.social_set_title('Social Page')
     // @ts-ignore
-    const response: object = this.$api.auth.login({ email: 'ralph@arbitrage.ph', password: '123abc' })
-    console.log('RESPONSE', response)
-    // @ts-ignore
     this.$navigator.navigate(`/${route}`)
   }
 
   mounted(): void {
+    // get and print users
+    AuthRepository.getUsers()
+      .then((data) => {
+        console.log('DATA RESPONSE', data)
+      })
+      .catch((error) => {
+        console.log('RESPONSE ERROR', error)
+      })
+
     this.chart_set_title('Chart Page')
   }
 }

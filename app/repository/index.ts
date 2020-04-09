@@ -1,7 +1,2 @@
-import auth from '@/modules/auth/repository'
-
-const api = {
-  auth,
-}
-
-export default api
+export { API } from './api'
+export { Config } from './api.config'
