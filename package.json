@@ -15,8 +15,8 @@
     }
   },
   "scripts": {
-    "android": "npm run lint-and-fix && tns run android --bundle",
-    "ios": "npm run lint-and-fix && tns run ios --bundle",
+    "android": "npm run lint-and-fix && tns run android --bundle --env.uglify --env.snapshot",
+    "ios": "npm run lint-and-fix && tns run ios --bundle --env.uglify",
     "lint": "npx eslint --ext .ts,.vue,.js app/",
     "lint-and-fix": "npx eslint --ext .ts,.vue,.js --fix app/"
   },
