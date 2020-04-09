@@ -6,11 +6,11 @@ import { UserInterface } from './auth.types'
  * AuthAPI class contains http requests for the auth module.
  */
 class AuthAPI extends API {
-    /**
-     * @param   {AxiosRequestConfig}  config  
-     *
-     * @return
-     */
+  /**
+   * @param   {AxiosRequestConfig}  config
+   *
+   * @return
+   */
   public constructor(config: AxiosRequestConfig) {
     super(config)
   }
