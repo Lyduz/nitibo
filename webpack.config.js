@@ -282,6 +282,7 @@ module.exports = env => {
             new webpack.DefinePlugin({
                 "global.TNS_WEBPACK": "true",
                 "TNS_ENV": JSON.stringify(mode),
+                "TNS_API_URL": (mode === "production") ? JSON.stringify("https://jsonplaceholder.typicode.com") : JSON.stringify("https://jsonplaceholder.typicode.com"),
                 "process": "global.process"
             }),
             // Remove all files from the out dir.

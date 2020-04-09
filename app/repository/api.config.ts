@@ -1,7 +1,7 @@
 import qs from 'qs'
 
 export const Config = {
-  baseURL: 'https://jsonplaceholder.typicode.com',
+  baseURL: TNS_API_URL,
   headers: {
     common: {
       'Content-Type': 'application/json',
