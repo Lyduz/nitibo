@@ -9,5 +9,4 @@ hooks
 platforms
 
 # Root Variables
-.env
 **/.DS_Store

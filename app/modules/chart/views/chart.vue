@@ -32,7 +32,7 @@ export default class Chart extends Vue {
   // data
   title = 'Chart Page'
 
-  mounted() {
+  mounted(): void {
     console.log(`Mounted: ${this.chart_get_title}`)
   }
 }

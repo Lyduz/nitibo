@@ -18,12 +18,17 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
+import { AuthRepository } from '@/modules/auth/repository'
 
 const STORE_SOCIAL = namespace('social')
 const STORE_CHART = namespace('chart')
 
 @Component
 export default class Home extends Vue {
+  $navigator!: {
+    navigate: (route: string) => void
+  }
+
   // social store
   @STORE_SOCIAL.State('title') social_title!: string
   @STORE_SOCIAL.Action('setTitle') social_set_title!: (payload: string) => void
@@ -39,13 +44,22 @@ export default class Home extends Vue {
    * @return
    */
   goTo(route: string): void {
-    //store in state
+    // store in state
     this.social_set_title('Social Page')
-    // @ts-ignore
+
     this.$navigator.navigate(`/${route}`)
   }
 
-  mounted() {
+  mounted(): void {
+    // get and print users
+    AuthRepository.getUsers()
+      .then((data) => {
+        console.log('DATA RESPONSE', data)
+      })
+      .catch((error) => {
+        console.log('RESPONSE ERROR', error)
+      })
+
     this.chart_set_title('Chart Page')
   }
 }
