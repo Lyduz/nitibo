@@ -30,6 +30,16 @@
     ],
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/member-delimiter-style": 0,
-    "@typescript-eslint/ban-ts-ignore": "off"
-  }
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/explicit-function-return-type": "off" // disable default
+  },
+  "overrides": [
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.tsx", "*.vue"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"]
+      }
+    }
+  ]
 }
