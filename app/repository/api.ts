@@ -3,27 +3,28 @@ import axios from './axios'
 export default {
   route: '',
 
-  index(params?: any): any {
+  index(params?: object): object {
     return axios.get(this.route, { params })
   },
 
-  show(id: string, params?: any): any {
+  show(id: string, params?: object): object {
     return axios.get(`${this.route}/${id}`, { params })
   },
 
-  create(payload: any): any {
+  create(payload: object): object {
     return axios.post(`${this.route}`, payload)
   },
 
-  update(id: string, payload: any): any {
+  update(id: string, payload: object): object {
     return axios.post(`${this.route}/${id}`, payload)
   },
 
-  put(id: string, payload: any): any {
+  put(id: string, payload: object): object {
     return axios.put(`${this.route}/${id}`, payload)
   },
 
-  submit(payload: any): any {
+  submit(payload: object): object {
+    console.log(axios)
     return axios.post(`${this.route}`, payload)
   },
 }

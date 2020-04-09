@@ -1,21 +1,25 @@
 import Vue from 'nativescript-vue'
-// FIXME: run vue dev tools and enable
-//import VueDevtools from 'nativescript-vue-devtools'
-import Navigator from 'nativescript-vue-navigator'
+import { VNode } from 'vue/types/umd'
 
+// global dependency
+import api from './repository'
 import routes from './router'
 import store from './store'
 
-import api from './repository'
-Vue.prototype.$api = api
-
+// main files
 import App from './App.vue'
 import './styles.scss'
+import Navigator from 'nativescript-vue-navigator'
+// FIXME: run vue dev tools and enable
+//import VueDevtools from 'nativescript-vue-devtools'
 
+// register global components
 Vue.use(Navigator, { routes })
+Vue.prototype.$api = api
 
 if (TNS_ENV !== 'production') {
-  //Vue.use(VueDevtools);
+  //FIXME: resolve VueDevTools issue
+  // Vue.use(VueDevtools);
 }
 
 // Prints Vue logs when --env.production is *NOT* set while building

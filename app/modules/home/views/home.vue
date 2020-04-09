@@ -39,10 +39,11 @@ export default class Home extends Vue {
    * @return
    */
   goTo(route: string): void {
-    //store in state
+    // store in state
     this.social_set_title('Social Page')
     // @ts-ignore
-    this.$api.auth.login({ email: 'ralph@arbitrage.ph', password: '123abc' })
+    const response: object = this.$api.auth.login({ email: 'ralph@arbitrage.ph', password: '123abc' })
+    console.log('RESPONSE', response)
     // @ts-ignore
     this.$navigator.navigate(`/${route}`)
   }
