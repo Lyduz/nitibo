@@ -7,7 +7,6 @@ import { UserInterface } from './auth.types'
  */
 class AuthAPI extends API {
     /**
-     *
      * @param   {AxiosRequestConfig}  config  
      *
      * @return
