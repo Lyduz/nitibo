@@ -9,15 +9,13 @@ import store from './store'
 import App from './App.vue'
 import './styles.scss'
 import Navigator from 'nativescript-vue-navigator'
-// FIXME: run vue dev tools and enable
-//import VueDevtools from 'nativescript-vue-devtools'
+import VueDevtools from 'nativescript-vue-devtools'
 
 // register global components
 Vue.use(Navigator, { routes })
 
 if (TNS_ENV !== 'production') {
-  //FIXME: resolve VueDevTools issue
-  // Vue.use(VueDevtools);
+  Vue.use(VueDevtools)
 }
 
 // Prints Vue logs when --env.production is *NOT* set while building
