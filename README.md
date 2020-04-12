@@ -38,6 +38,7 @@
 ├── types
 │   ├── env.d.ts
 │   ├── nativescript-vue.d.ts
+│   ├── vue-class.d.ts
 │   └── vue-sfc.d.ts
 ├── .babelrc
 ├── .eslintignore
