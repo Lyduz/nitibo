@@ -23,6 +23,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
+import { SocialRepository } from '@/modules/social/repository'
 
 const STORE_SOCIAL = namespace('social')
 
@@ -30,6 +31,26 @@ const STORE_SOCIAL = namespace('social')
 export default class Social extends Vue {
   // getter
   @STORE_SOCIAL.Getter('getTitle') social_get_title!: string
+
+  mounted(): void {
+    // GET https://jsonplaceholder.typicode.com/comments
+    SocialRepository.getComments()
+      .then((data) => {
+        console.log('ALL COMMENTS', data)
+      })
+      .catch((error) => {
+        console.log('RESPONSE ERROR', error)
+      })
+
+    // GET https://jsonplaceholder.typicode.com/comments?postId=1
+    SocialRepository.getCommentsByPostID(1)
+      .then((data) => {
+        console.log('POST ID 1 COMMENTS', data)
+      })
+      .catch((error) => {
+        console.log('RESPONSE ERROR', error)
+      })
+  }
 }
 </script>
 
