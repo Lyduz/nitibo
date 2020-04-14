@@ -50,7 +50,7 @@ export class API {
 
   public post<T, R = AxiosResponse<T>>(
     url: string,
-    data?: string,
+    data?: {},
     config?: AxiosRequestConfig
   ): Promise<R> {
     return this.api.post(url, data, config)
@@ -58,7 +58,7 @@ export class API {
 
   public put<T, R = AxiosResponse<T>>(
     url: string,
-    data?: string,
+    data?: {},
     config?: AxiosRequestConfig
   ): Promise<R> {
     return this.api.put(url, data, config)
@@ -66,7 +66,7 @@ export class API {
 
   public patch<T, R = AxiosResponse<T>>(
     url: string,
-    data?: string,
+    data?: {},
     config?: AxiosRequestConfig
   ): Promise<R> {
     return this.api.patch(url, data, config)

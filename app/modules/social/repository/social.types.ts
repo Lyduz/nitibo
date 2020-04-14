@@ -4,3 +4,9 @@ export interface CommentInterface {
   readonly email: string
   readonly body?: string
 }
+
+export interface PostStateInterface {
+  title: string
+  body: string
+  userId: number
+}
