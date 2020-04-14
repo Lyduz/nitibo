@@ -1,6 +1,6 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { API, Config } from '@/repository'
-import { CommentInterface } from './social.types'
+import { CommentInterface, PostStateInterface } from './social.types'
 /**
  * SocialAPI class contains http requests for the auth module.
  */
@@ -12,6 +12,23 @@ class SocialAPI extends API {
    */
   public constructor(config: AxiosRequestConfig) {
     super(config)
+  }
+
+  /**
+   * Submit a post resource.
+   *
+   * @param   {PostStateInterface}  payload
+   *
+   * @return  {Promise<number>}
+   */
+  public async createPost(payload: PostStateInterface): Promise<number> {
+    return await this.post<number>('/posts', payload)
+      .then((response: AxiosResponse<number>) => {
+        return response.status
+      })
+      .catch((error: AxiosError) => {
+        throw error
+      })
   }
 
   /**

@@ -50,6 +50,21 @@ export default class Social extends Vue {
       .catch((error) => {
         console.log('RESPONSE ERROR', error)
       })
+
+    // POST https://jsonplaceholder.typicode.com/posts
+    SocialRepository.createPost({
+      title: 'Nitibo',
+      body: 'A Nativescript-Vue Typescript Template',
+      userId: 1,
+    })
+      .then((statusCode) => {
+        if (statusCode === 201) {
+          console.log('SUCCESSFULLY POSTED')
+        }
+      })
+      .catch((error) => {
+        console.log('RESPONSE ERROR', error)
+      })
   }
 }
 </script>
