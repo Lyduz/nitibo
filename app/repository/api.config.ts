@@ -4,6 +4,8 @@ export const Config = {
   baseURL: TNS_API_URL,
   headers: {
     common: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      Pragma: 'no-cache',
       'Content-Type': 'application/json',
       Accept: 'application/json',
     },
