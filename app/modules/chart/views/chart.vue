@@ -1,36 +1,24 @@
+<!--This page is using the layout components of nitibo @/layout/default.vue-->
 <template>
-  <Page>
-    <ActionBar>
-      <NavigationButton
-        text="Go Back"
-        android.systemIcon="ic_menu_back"
-        @tap="$navigator.navigate('/home')"
-      />
-      <Label :text="title" class="title" />
-    </ActionBar>
-
-    <StackLayout
-      orientation="vertical"
-      horizontalAlignment="center"
-      verticalAlignment="center"
-    >
-      <Label :text="title" class="header" />
-    </StackLayout>
-  </Page>
+  <Default :title="chart_get_title">
+    <Label :text="chart_get_title" class="header" />
+  </Default>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
+import { Default } from '@/layout'
 
 const STORE_CHART = namespace('chart')
 
-@Component
+@Component({
+  components: {
+    Default,
+  },
+})
 export default class Chart extends Vue {
   @STORE_CHART.Getter('getTitle') chart_get_title!: string
-
-  // data
-  title = 'Chart Page'
 
   mounted(): void {
     console.log(`Mounted: ${this.chart_get_title}`)

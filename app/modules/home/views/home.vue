@@ -1,7 +1,8 @@
+<!--This page is a bare-metal example without using layout components of nitibo-->
 <template>
   <Page>
     <ActionBar>
-      <Label text="Lyduz" class="title" />
+      <Label text="Nitibo" class="title" />
     </ActionBar>
 
     <StackLayout
