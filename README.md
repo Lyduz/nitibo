@@ -7,6 +7,9 @@
 ```bash
 ├── app
 │   ├── App_Resources
+│   ├── layout
+│   │   ├── default.vue
+│   │   └── index.ts
 │   ├── modules
 │   │   ├── auth
 │   │   │   ├── repository
@@ -71,6 +74,11 @@
 - repository/ - contains the modules' API calls which extends the base API
 - store/ - contains the modules' vuex store configurations
 - views/ - contains the `view` of the application. The Component/ is also placed here for easy referencing
+
+### layout/
+
+> Contains the layout components that you may use in your pages similar to nuxt's layout directory. <br>
+Please see social and chart module's view for reference.
 
 ### repository/
 
