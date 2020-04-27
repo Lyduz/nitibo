@@ -13,7 +13,7 @@ const store = new Vuex.Store({
     social,
     chart,
   },
-  strict: true,
+  strict: TNS_ENV !== 'production',
 })
 
 Vue.prototype.$store = store
