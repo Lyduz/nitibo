@@ -5,7 +5,7 @@
     "strict": true,
     "strictPropertyInitialization": true,
     "jsx": "preserve",
-    "importHelpers": true,
+    "noEmitHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "allowJs": false,
