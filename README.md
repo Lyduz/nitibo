@@ -98,7 +98,7 @@ Please see social and chart module's view for reference.
 
 ### main.ts
 
-> the main Typescript file
+> the main file entry point
 
 ## The types/ Directory
 
@@ -156,16 +156,16 @@ During usual run, project runs with following settings -
 
 ```bash
 # Build, watch for changes and debug the application
-tns debug <platform> --bundle
+tns debug <platform>
 ```
 
 To minify code, and prevent Vue logs -
 
 ```bash
 # Build for production
-tns build <platform> --bundle --env.production
+tns build <platform> --env.production
 
-tns run <platform> --bundle --env.production
+tns run <platform> --env.production
 ```
 
 ## Technologies Used
