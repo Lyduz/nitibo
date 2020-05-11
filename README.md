@@ -195,7 +195,7 @@ tns run <platform> --env.production
 
 ## TODO
 
-- Fix major issues [#7](https://github.com/Lyduz/nitibo/issues/7)
+- ~~Fix major issues [#7](https://github.com/Lyduz/nitibo/issues/7)~~
 - Finish production documentation
 - Non-breaking upgrade and up to date with latest nativescript core versions (both android and iOS)
 - Documentation for optimization
