@@ -17,7 +17,7 @@
     "android": "npm run lint-and-fix && tns run android",
     "ios": "npm run lint-and-fix && tns run ios",
     "lint": "npx eslint --ext .ts,.vue,.js app/",
-    "lint-and-fix": "npx eslint --ext .ts,.vue,.js --fix app/"
+    "lint:fix": "npx eslint --ext .ts,.vue,.js --fix app/"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
