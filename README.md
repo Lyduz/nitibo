@@ -137,9 +137,9 @@ plugins: [
 - To start development with [android](https://www.android.com), run `npm run android`
 - To start development with [iOS](https://developer.apple.com/ios/), run `npm run ios`
 - Run the configured linter using `npm run lint`
-- Run and fix the configure linter using `npm run lint-and-fix`
+- Run and fix the configure linter using `npm run lint:fix`
 - Run vue devtools using `npx vue-devtools` and in another terminal, run the platform with the commands above (`npm run android or npm run ios`). Please follow this awesome guide from [nativescript-vue docs](https://nativescript-vue.org/en/docs/getting-started/vue-devtools/)
-- You may use the default `tns` commands as usual (e.g `tns run android --bundle, tns run ios --bundle`)
+- You may use the default `tns` commands as usual (e.g `tns run android, tns run ios`)
 - Append the `--device <device-id>` when using actual devices for [android](https://docs.nativescript.org/tooling/docs-cli/project/testing/run-android) and [iOS](https://docs.nativescript.org/tooling/docs-cli/project/testing/run-ios)
 
 ## Production Mode (Docs WIP)
@@ -197,7 +197,6 @@ tns run <platform> --env.production
 
 - ~~Fix major issues [#7](https://github.com/Lyduz/nitibo/issues/7)~~
 - Finish production documentation
-- Non-breaking upgrade and up to date with latest nativescript core versions (both android and iOS)
 - Documentation for optimization
 - Preview support and documentation
 - CI with TravisCI
