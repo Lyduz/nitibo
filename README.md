@@ -2,6 +2,8 @@
 
 #### A Nativescript-Vue Class Component Starter Template Using Module-Oriented Structure.
 
+### NOTE!!! This NativeScript Template is no longer supported or actively maintained. This is based on NS 6.0+ that is not compatible with NS 7.0+. You can still fork this and apply to your preferred NativeScript-Vue TypeScript project. Happy NativeScripting :)
+
 ## Module-Oriented Structure
 
 ```bash
